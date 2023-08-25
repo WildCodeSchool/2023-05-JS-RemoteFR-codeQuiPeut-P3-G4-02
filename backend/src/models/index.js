@@ -30,12 +30,12 @@ pool.getConnection().catch(() => {
 const models = {}
 
 const ItemManager = require("./ItemManager")
-const produitsManager = require("./produitsManager")
+const ProduitsManager = require("./produitsManager")
 
 models.item = new ItemManager()
 models.item.setDatabase(pool)
 
-models.produits = new produitsManager()
+models.produits = new ProduitsManager()
 models.produits.setDatabase(pool)
 
 // bonus: use a proxy to personalize error message,

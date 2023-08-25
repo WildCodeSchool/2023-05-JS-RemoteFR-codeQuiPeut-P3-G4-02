@@ -12,9 +12,12 @@ export default function Home() {
 
   return (
     <header className="App-header">
-      {produits.map(produit => (
+      {produits.map((produit) => (
         <>
           <img src={produit.imgUrl} alt={produit.name}></img>
+          <p>{produit.name}</p>
+          <p>{produit.univers}</p>
+          <p>{produit.catégorie}</p>
           <p>{produit.price}</p>
         </>
       ))}
