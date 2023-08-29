@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 
-export default function Home() {
+const Home = () => {
   const [produits, setProduits] = useState([])
 
   useEffect(() => {
@@ -24,3 +24,5 @@ export default function Home() {
     </header>
   )
 }
+
+export default Home
