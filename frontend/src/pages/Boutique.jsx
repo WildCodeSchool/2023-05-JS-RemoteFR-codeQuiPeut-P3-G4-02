@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
+import Card from "../components/Card"
 
 const Boutique = () => {
   const [produits, setProduits] = useState([])
@@ -11,14 +12,17 @@ const Boutique = () => {
   }, [])
 
   return (
-    <div>
+    <div className="cards-container">
       {produits.map((produit) => (
         <>
-          <img src={produit.imgUrl} alt={produit.name}></img>
-          <p>{produit.name}</p>
-          <p>{produit.univers}</p>
-          <p>{produit.catégorie}</p>
-          <p>{produit.price}</p>
+          <Card
+            key={produit}
+            imgUrl={produit.imgUrl}
+            name={produit.name}
+            univers={produit.univers}
+            catégorie={produit.catégorie}
+            price={produit.price}
+          />
         </>
       ))}
     </div>
