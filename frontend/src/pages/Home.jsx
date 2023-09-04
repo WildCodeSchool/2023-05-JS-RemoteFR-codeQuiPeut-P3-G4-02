@@ -1,3 +1,4 @@
+import "./Home.css"
 import { Link } from "react-router-dom"
 //  import { useState, useEffect } from "react"
 //  import axios from "axios"
@@ -13,7 +14,6 @@ const Home = () => {
 
   return (
     <>
-      <p>je suis dans la page d'acceuil</p>
       <Link to="/boutique">
         <button>Boutique</button>
       </Link>
