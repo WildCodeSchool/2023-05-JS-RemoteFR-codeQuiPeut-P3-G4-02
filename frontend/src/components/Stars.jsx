@@ -6,6 +6,7 @@ const Stars = () => {
   const [rating, setRating] = useState(100)
   const handleRating = (rate) => {
     setRating(rate)
+    console.info(rate)
   }
   return <Rating onClick={handleRating} ratingValue={rating} />
 }
