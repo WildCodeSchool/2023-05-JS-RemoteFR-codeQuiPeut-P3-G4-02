@@ -1,0 +1,71 @@
+.globalCardDetails{
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 300px;
+    box-shadow: 0px 0px 20px 12px rgb(0 255 242);
+    border-radius: 40px;
+}
+
+.topCardDetails{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    color: #6e2091;
+    background-color: white;
+    width: 350px;
+    height: 500px;
+    border-radius: 20px 20px 0px 0px;
+    font-size: 20px;
+}
+
+.bottomCardDetails{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+    height: 63px;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.profil-picture{
+    width: 80px;
+    padding-top: 10px;
+}
+
+.like-pict{
+    height: 66px;
+    width: 66px;
+}
+
+.caddy-pict{
+    height: 66px;
+    width: 66px;
+}
+
+.card-picture{
+    padding-top: 10px;
+    height: 220px;
+    width: 180px;
+}
+
+.button-like{
+    height: 70px;
+    width: 70px;
+    margin-bottom: 30px;
+}
+
+.button-caddy{
+    height: 70px;
+    width: 70px;
+    margin-bottom: 30px;
+}

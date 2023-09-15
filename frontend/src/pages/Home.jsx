@@ -15,7 +15,11 @@ const Home = () => {
   return (
     <>
       <Link to="/boutique">
-        <button>Boutique</button>
+        <button className="glowing-btn">
+          <span className="glowing-txt">
+            B<span className="faulty-letter">O</span>UTIQUE
+          </span>
+        </button>
       </Link>
     </>
   )
