@@ -8,7 +8,6 @@ import CardDetails from "../components/CardDetails"
 const DescriptionCarte = () => {
   const [produit, setProduit] = useState([])
   const { id } = useParams()
-  console.log(id)
 
   useEffect(() => {
     axios
