@@ -3,6 +3,7 @@ import Compte from "./pages/Compte"
 import Contact from "./pages/Contact"
 import Boutique from "./pages/Boutique"
 import Navbar from "./components/Navbar"
+import DescriptionCarte from "./pages/DescriptionCarte"
 import { Routes, Route } from "react-router-dom"
 
 import "./App.css"
@@ -16,6 +17,7 @@ function App() {
         <Route path="/compte" element={<Compte />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/boutique" element={<Boutique />} />
+        <Route path="/descriptioncarte/:id" element={<DescriptionCarte />} />
       </Routes>
     </div>
   )

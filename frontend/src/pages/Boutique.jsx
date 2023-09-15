@@ -16,11 +16,10 @@ const Boutique = () => {
       {produits.map((produit) => (
         <>
           <Card
-            key={produit}
+            key={produit.id}
+            id={produit.id}
             imgUrl={produit.imgUrl}
             name={produit.name}
-            univers={produit.univers}
-            catégorie={produit.catégorie}
             price={produit.price}
           />
         </>

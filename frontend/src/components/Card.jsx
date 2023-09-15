@@ -1,22 +1,15 @@
-import Stars from "./Stars"
-import profilePicture from "../assets/avatar-woman.png"
 import "./Card.css"
+import { Link } from "react-router-dom"
 
-const Card = (produit) => {
+const Card = ({ imgUrl, name, price, id }) => {
   return (
     <div className="card">
-      <img
-        className="profile-picture"
-        src={profilePicture}
-        alt="profilePicture"
-      />
-      <div key={produit.id}>
-        <img className="card-picture" src={produit.imgUrl} alt={produit.name} />
-        <p>{produit.name}</p>
-        <p>{produit.univers}</p>
-        <p>{produit.catégorie}</p>
-        <p>{produit.price}</p>
-        <Stars />
+      <div>
+        <Link to={`/DescriptionCarte/${id}`}>
+          <img className="card-picture" src={imgUrl} alt={name} />
+          <p>{name}</p>
+          <p>{price}$</p>
+        </Link>
       </div>
     </div>
   )

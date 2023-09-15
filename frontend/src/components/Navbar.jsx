@@ -7,14 +7,14 @@ import "./Navbar.css"
 const Navbar = () => {
   return (
     <navbar className="navbarGlobal">
-      <ul>
-        <a>
+      <ul id="primary">
+        <li>
           <Link to="/">
             <a href="#">
               <img className="logo" src={logoalter} />
             </a>
           </Link>
-        </a>
+        </li>
         <li>
           <Link to="/Compte">COMPTE</Link>
         </li>
