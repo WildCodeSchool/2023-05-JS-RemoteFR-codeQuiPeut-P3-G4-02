@@ -21,7 +21,11 @@ const Navbar = () => {
         <li>
           <Link to="/Contact">CONTACT</Link>
         </li>
-        <img className="logo-panier" src={logopanier} />
+        <li className="li-panier">
+          <Link to="/Panier">
+            <img className="logo-panier" src={logopanier} />
+          </Link>
+        </li>
       </ul>
     </navbar>
   )
