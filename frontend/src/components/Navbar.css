@@ -49,11 +49,24 @@ a{
 }
 
 .logo{
+  padding-top: 6px;
   height: 60px;
+  width: 190px;
 }
 
 .logo-panier{
   height: 50px;
+}
+
+.li-logo{
+  width: 200px;
+  height: 70px;
+  width: 200px;
+  height: 70px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 li {

@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <navbar className="navbarGlobal">
       <ul id="primary">
-        <li>
+        <li className="li-logo">
           <Link to="/">
             <a href="#">
               <img className="logo" src={logoalter} />

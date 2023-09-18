@@ -21,6 +21,15 @@ const Home = () => {
           </span>
         </button>
       </Link>
+      <div className="presentation">
+        <h1>Etes vous prêts à changer de rôle dans votre vie?</h1>
+        <p>Changez votre réalité le temps d'une partie entre amis</p>
+        <p>Inité ou non découvrez l'univers du jeu de rôle</p>
+        <p>
+          Vous trouverez dans ALTERWORLD les objets dont vous aurez besoin pour
+          rendre votre expérience de jeu unique!
+        </p>
+      </div>
     </>
   )
 }
