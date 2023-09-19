@@ -31,12 +31,16 @@ const models = {}
 
 const ItemManager = require("./ItemManager")
 const ProduitsManager = require("./produitsManager")
+const PanierManager = require("./PanierManager")
 
 models.item = new ItemManager()
 models.item.setDatabase(pool)
 
 models.produits = new ProduitsManager()
 models.produits.setDatabase(pool)
+
+models.panier = new PanierManager()
+models.panier.setDatabase(pool)
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
