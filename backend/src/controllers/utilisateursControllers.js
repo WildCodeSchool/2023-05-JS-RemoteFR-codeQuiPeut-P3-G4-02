@@ -1,7 +1,7 @@
 const models = require("../models")
 
 const browse = (req, res) => {
-  models.panier
+  models.utilisateurs
     .findAll()
     .then(([rows]) => {
       res.send(rows)
@@ -12,35 +12,8 @@ const browse = (req, res) => {
     })
 }
 
-const getAllPanier = (req, res) => {
-  models.panier
-    .findAllPanierDetails()
-    .then(([rows]) => {
-      res.send(rows)
-    })
-    .catch((err) => {
-      console.error(err)
-      res.sendStatus(500)
-    })
-}
-
-const add = (req, res) => {
-  const panier = req.body
-
-  // TODO validations (length, format...)
-
-  models.panier
-    .insert(panier)
-    .then(([result]) => {
-      res.json(result.insertId)
-    })
-    .catch((err) => {
-      console.error(err)
-      res.sendStatus(500)
-    })
-}
 const read = (req, res) => {
-  models.panier
+  models.utilisateurs
     .find(req.params.id)
     .then(([rows]) => {
       if (rows[0] == null) {
@@ -56,14 +29,14 @@ const read = (req, res) => {
 }
 
 const edit = (req, res) => {
-  const panier = req.body
+  const utilisateurs = req.body
 
   // TODO validations (length, format...)
 
-  panier.id = parseInt(req.params.id, 10)
+  utilisateurs.id = parseInt(req.params.id, 10)
 
-  models.panier
-    .update(panier)
+  models.utilisateurs
+    .update(utilisateurs)
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404)
@@ -76,8 +49,25 @@ const edit = (req, res) => {
       res.sendStatus(500)
     })
 }
+
+const add = (req, res) => {
+  const utilisateurs = req.body
+
+  // TODO validations (length, format...)
+
+  models.utilisateurs
+    .insert(utilisateurs)
+    .then(([result]) => {
+      res.location(`/utilisateurs/${result.insertId}`).sendStatus(201)
+    })
+    .catch((err) => {
+      console.error(err)
+      res.sendStatus(500)
+    })
+}
+
 const destroy = (req, res) => {
-  models.panier
+  models.utilisateurs
     .delete(req.params.id)
     .then(([result]) => {
       if (result.affectedRows === 0) {
@@ -94,9 +84,8 @@ const destroy = (req, res) => {
 
 module.exports = {
   browse,
-  add,
   read,
   edit,
+  add,
   destroy,
-  getAllPanier,
 }

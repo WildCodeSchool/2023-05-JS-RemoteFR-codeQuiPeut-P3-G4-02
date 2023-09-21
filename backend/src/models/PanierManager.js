@@ -5,17 +5,23 @@ class PanierManager extends AbstractManager {
     super({ table: "panier" })
   }
 
+  findAllPanierDetails() {
+    return this.database.query(
+      "SELECT * FROM panier join produits as P ON panier.products_id = P.id"
+    )
+  }
+
   insert(panier) {
     return this.database.query(
       `insert into ${this.table} (user_id, products_id, quantity) values (?,?,?)`,
-      [panier.user_id, panier.products_id, panier.quantity]
+      [panier.userId, panier.productsId, panier.quantity]
     )
   }
 
   update(panier) {
     return this.database.query(
       `UPDATE ${this.table} SET user_id = ?, products_id = ?, quantity = ?, WHERE (id = ?)`,
-      [panier.user_id, panier.products_id, panier.quantity]
+      [panier.userId, panier.productsId, panier.quantity]
     )
   }
 }
